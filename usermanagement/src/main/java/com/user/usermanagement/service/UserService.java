@@ -4,6 +4,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.user.usermanagement.entities.User;
+import com.user.usermanagement.exception.ResourceNotFoundException;
 import com.user.usermanagement.repository.UserRepo;
 
 
@@ -19,6 +20,11 @@ public class UserService {
     public List<User> getAllUsers()
     {
         return   this.userRepo.findAll() ;
+    }
+
+    public User getUser(String userId)
+    {
+        return   this.userRepo.findById(userId).orElseThrow(()-> new ResourceNotFoundException("Please enter a valid user id")) ;
     }
 
     public User createUser(User user)
