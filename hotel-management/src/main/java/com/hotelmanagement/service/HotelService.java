@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.hotelmanagement.entities.Hotel;
+import com.hotelmanagement.exception.ResourceNotFoundException;
 import com.hotelmanagement.repo.HotelRepo;
 
 @Service
@@ -23,8 +24,8 @@ public class HotelService {
         return this.hotelRepo.save(hotel) ;
     }
 
-    // public Hotel getHotel(String hotelId)
-    // {
-    //     return this.hotelRepo.findById(hotelId) ;
-    // }
+    public Hotel getHotel(String hotelId)
+    {
+        return this.hotelRepo.findById(hotelId).orElseThrow(() ->  new ResourceNotFoundException("Please enter a correct hotel Id .")) ;
+    }
 }
