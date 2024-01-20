@@ -2,6 +2,8 @@ package com.hotelmanagement.controllers;
 
 import org.springframework.web.bind.annotation.RestController;
 import com.hotelmanagement.service.HotelService;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,6 +13,7 @@ import java.util.* ;
 @RestController
 public class HotelController {
     
+    @Autowired
     private HotelService hotelService ;
 
     @GetMapping("/get-hotels")
