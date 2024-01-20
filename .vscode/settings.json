@@ -3,5 +3,6 @@
     "java.debug.settings.onBuildFailureProceed": true,
     "java.dependency.packagePresentation": "flat",
     "java.dependency.syncWithFolderExplorer": true,
-    "java.project.explorer.showNonJavaResources": true
+    "java.project.explorer.showNonJavaResources": true,
+    "java.compile.nullAnalysis.mode": "disabled"
 }
