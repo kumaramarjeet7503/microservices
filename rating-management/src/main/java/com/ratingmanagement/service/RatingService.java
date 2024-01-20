@@ -16,7 +16,13 @@ public class RatingService {
 
     public List<Rating>  getRatingByUser(String userId)
     {
-        List<Rating> ratings = this.ratingRepo.findAll() ;
+        List<Rating> ratings = this.ratingRepo.findByUserId(userId) ;
+        return ratings ;
+    }
+
+    public List<Rating>  getRatingByHotel(String hotelId)
+    {
+        List<Rating> ratings = this.ratingRepo.findByHotelId(hotelId) ;
         return ratings ;
     }
 
