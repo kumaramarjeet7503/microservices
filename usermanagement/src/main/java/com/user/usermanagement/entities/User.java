@@ -22,9 +22,14 @@ public class User {
     @Id
     private String id ;
     private String name ;
-    private boolean is_active ;
+    private boolean active ;
     private String city ;
     @Transient
     private List<Rating> ratings = new ArrayList<>() ;
 
+    @Override
+    public String toString() {
+        return "User [id=" + id + ", name=" + name + ", isActive=" + active + ", city=" + city + ", ratings="
+                + ratings + "]";
+    }
 }
