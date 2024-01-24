@@ -17,6 +17,6 @@ spring:
       database: "micro"
   
   application:
-    name: "USER MANAGEMENT"
+    name: "USER-MANAGEMENT"
 
 

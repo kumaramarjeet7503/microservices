@@ -13,7 +13,7 @@ spring:
       uri:  "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.1"
       database: "micro"
   application:
-    name: "HOTEL MANAGEMENT"
+    name: "HOTEL-MANAGEMENT"
 
 eureka:
   instance:
