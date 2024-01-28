@@ -11,7 +11,7 @@ import com.user.usermanagement.entities.Hotel;
 @FeignClient(name = "HOTEL-MANAGEMENT")
 public interface HotelService {
     
-    @GetMapping("/get-hotel/{hotelId}")
+    @GetMapping("/hotel/get-hotel/{hotelId}")
     public abstract Hotel getHotelById(@PathVariable String hotelId) ;
 
 }

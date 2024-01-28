@@ -11,6 +11,6 @@ import com.user.usermanagement.entities.Rating;
 @FeignClient(name = "RATING-MANAGEMENT")
 public interface RatingService {
     
-    @GetMapping("/user/get-rating/{userId}")
+    @GetMapping("/rating/user/get-rating/{userId}")
     public List<Rating> getRatingByUser(@PathVariable String userId) ;
 }
